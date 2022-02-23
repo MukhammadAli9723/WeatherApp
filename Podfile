@@ -7,4 +7,5 @@ target 'Weather' do
 
   # Pods for Weather
 	pod 'SnapKit'
+  pod 'lottie-ios'
 end
