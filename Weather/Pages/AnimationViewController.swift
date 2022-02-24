@@ -8,7 +8,7 @@ import UIKit
 import SnapKit
 import Lottie
 
-class AnimationViewController: UIViewController {
+class AnimationViewController: UIViewController{
     let imageView  = UIImageView()
     let bottomView = UIView()
     var animationView: AnimationView?
@@ -17,15 +17,17 @@ class AnimationViewController: UIViewController {
     let sunImage   = UIImageView()
     let nextButton = UIButton()
     
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
         view.backgroundColor = UIColor.appMainColor
-        
-        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
     
+        
         getStartedView()
-     }
+    }
     func getStartedView(){
         animationView = .init(name: "weather_clouds")
         animationView?.frame = view.bounds
@@ -44,7 +46,7 @@ class AnimationViewController: UIViewController {
         bottomView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
             make.top.equalTo(animationView?.snp.bottom as! ConstraintRelatableTarget).offset(10)
-             make.height.equalTo(view.snp.height).multipliedBy(0.3)
+            make.height.equalTo(view.snp.height).multipliedBy(0.3)
         }
         
         bottomView.addSubview(appName)
@@ -90,11 +92,10 @@ class AnimationViewController: UIViewController {
         
     }
     
-  
+    
     @objc func nextPage(){
         
         let vc = MainViewController()
-        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
