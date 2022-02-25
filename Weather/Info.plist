@@ -2,8 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocalNetworkUsageDescription</key>
-	<string>We need your location to get current weather for where you are. </string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Ruxsat ber</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Ruxsat ber</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Ruxsat ber</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
